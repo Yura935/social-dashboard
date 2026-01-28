@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Responsive polish */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  background: linear-gradient(180deg, #f0f4f8 0%, #e8eef4 50%, #f5f7fa 100%);
+}
+
+/* Grid columns with d-flex: make child (card) fill width and allow shrink */
+.row [class*="col-"].d-flex {
+  min-width: 0;
+}
+.row [class*="col-"].d-flex > * {
+  width: 100%;
+  min-width: 0;
+}
